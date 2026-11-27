@@ -396,3 +396,63 @@ body { background:var(--page); }
 @media(max-width:1000px){.approach-inner{grid-template-columns:1fr}.approach-intro>p:last-child{max-width:650px}.nav-row{gap:20px}.nav-row nav{gap:15px}}
 @media(max-width:760px){.nav-row{flex-wrap:wrap;gap:10px;padding-block:10px}.nav-row nav{display:flex;order:3;width:100%;margin:0;gap:16px;overflow-x:auto;padding:5px 0;justify-content:flex-start}.nav-row nav a{white-space:nowrap}.nav-action{margin-left:auto}.brand img{width:49px;height:29px}.brand .wordmark{font-size:24px}.brand .wordmark small{font-size:6px}.closing-inner{flex-direction:column;align-items:flex-start}}
 @media(max-width:420px){.approach-cards{flex-direction:column}.approach-card{flex:auto;display:grid;grid-template-columns:1fr 85px;gap:4px 12px}.approach-card svg{grid-column:2;grid-row:1/5;height:85px;margin:0}.approach-card p{margin:3px 0 7px}.approach-link{grid-column:1}.nav-action{font-size:11px;gap:4px;padding:8px}.brand .wordmark{font-size:21px}.brand img{width:43px;height:25px}}
+
+/* Commercial discovery experience: editorial, grounded and enterprise-focused. */
+.hero h1{font-size:clamp(52px,5.1vw,87px)}
+.hero-disclosure{font-size:11px;color:#b5c8ba;margin-top:14px;line-height:1.65}
+.buyer-strip{background:#10251b;border-bottom:1px solid #345043}
+.buyer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:20px;gap:22px}
+.buyer-grid>div{display:grid;grid-template-columns:32px minmax(0,1fr);gap:3px 12px;align-items:center}
+.buyer-grid>div+div{border-left:1px solid #3a5244;padding-left:24px}
+.buyer-grid span{grid-row:1/3;color:#9dd4ab;font:12px var(--mono);align-self:start;padding-top:4px}
+.buyer-grid strong{font-size:15px;font-weight:630;color:#e7f1e6}.buyer-grid small{color:#b5c9b9;font-size:12px;line-height:1.5}
+.research-teams,.questions{background:#edf3e9;color:#183b2c;padding-block:clamp(46px,6vw,94px)}
+.commercial-heading{max-width:720px;margin-bottom:30px}
+.commercial-heading h2,.enterprise h2,.questions h2{font-size:clamp(42px,5vw,72px);line-height:1.02}
+.commercial-heading h2 em,.questions h2 em,.enterprise h2 em{font:italic 1.11em/.96 "Instrument Serif",Georgia,serif;color:#27784f}
+.commercial-heading>p:last-child{color:#476553;line-height:1.7;max-width:650px;margin-top:15px}
+.research-teams .eyebrow,.questions .eyebrow{color:#34664a}.research-teams .rule,.questions .rule{background:#34835d}
+.team-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.team-card{background:#f8faf5;border:1px solid #c9dacc;border-radius:20px;padding:clamp(18px,2.5vw,32px);display:flex;flex-direction:column;box-shadow:0 8px 24px #153c1d09}
+.team-num{font:600 10px/1.6 var(--mono);letter-spacing:.07em;color:#496e53}
+.team-card svg{width:100%;height:110px;color:#4d8867;margin:22px 0;background:radial-gradient(ellipse,#dce9d8,transparent 70%)}
+.team-card h3{font-size:25px;line-height:1.2}
+.team-card p{font-size:14px;line-height:1.65;margin:12px 0 20px;color:#4e6757}
+.team-card a{margin-top:auto;color:#256741;font-weight:650;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.team-card a:hover,.question-list a:hover{text-decoration:underline}
+.research-teams a:focus-visible,.questions a:focus-visible,.question-list summary:focus-visible{outline:2px solid #247a50;outline-offset:4px}
+.enterprise{padding-block:clamp(52px,7vw,105px);background:radial-gradient(ellipse at 82% 30%,#2b543b,transparent 62%),#0d2017;border-block:1px solid var(--line)}
+.enterprise-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.enterprise h2 em{color:#c6ecae}
+.enterprise-copy>p:not(.eyebrow){color:#c0d3c5;max-width:480px;margin-top:22px;line-height:1.7}
+.enterprise-note{margin-top:27px;padding:14px 16px;border-left:2px solid #8ec3a2;background:#20392b;border-radius:0 8px 8px 0;max-width:490px}
+.enterprise-note strong{font-size:14px}.enterprise-note p{color:#b6cbb9;font-size:13px;line-height:1.65;margin-top:5px}
+.enterprise-contact{display:inline-flex;gap:9px;align-items:center;margin-top:18px;color:#c8ecc0;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+.pricing-panel{border-radius:24px;overflow:hidden;background:#eef4e9;color:#1a3d2d;border:1px solid #afcbb2;box-shadow:0 18px 50px #06150b66}
+.pricing-label{padding:18px 25px;border-bottom:1px solid #c9dacc;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font:600 10px/1.5 var(--mono);letter-spacing:.07em;color:#41654b}
+.pricing-label span:last-child{letter-spacing:0}
+.annual-price{padding:clamp(20px,3vw,35px)}
+.annual-price>span,.monthly-price>div>span{font-size:13px;color:#42614b;font-weight:600}
+.annual-price h3{font-size:clamp(42px,4.5vw,68px);font-weight:570;letter-spacing:-.065em;line-height:1.08;margin:8px 0}
+.annual-price h3 span,.monthly-price h3 span{font:500 15px "DM Sans",Arial,sans-serif;letter-spacing:0;color:#4b6a54;white-space:nowrap}
+.annual-price p,.monthly-price p{color:#42614b;font-size:13px;line-height:1.6}
+.pricing-cta{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#164b34;color:#f4faee;font-weight:640;font-size:14px;border-radius:10px;padding:14px 17px;margin-top:24px}
+.pricing-cta:hover{background:#236e4b}.pricing-panel a:focus-visible{outline-color:#27784f}
+.monthly-price{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px clamp(20px,3vw,35px);background:#dfebdd;border-top:1px solid #c2d7c5}
+.monthly-price h3{font-size:30px;line-height:1.2;margin:6px 0}
+.monthly-price>a{font-size:13px;color:#235f40;font-weight:650;white-space:nowrap}
+.price-foot{padding:14px clamp(20px,3vw,35px);font-size:11px;color:#4b6553;border-top:1px solid #c2d7c5;line-height:1.6}
+.questions-inner{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(26px,6vw,90px)}
+.question-list{border-top:1px solid #bcd0bf}
+.question-list details{border-bottom:1px solid #bcd0bf;padding:18px 0}
+.question-list summary{cursor:pointer;font-size:16px;font-weight:650;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.question-list summary::-webkit-details-marker{display:none}
+.question-list summary::after{content:"+";color:#27784f;font-size:24px;line-height:1;flex:none}
+.question-list details[open] summary::after{content:"−"}
+.question-list details p{font-size:14px;line-height:1.75;color:#476553;margin-top:10px}
+.question-list a{color:#256741;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.closing-actions{display:flex;flex-direction:column;align-items:flex-start;gap:15px;flex:none}
+.foot-row>span a{color:#bce4c0;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.enterprise-inner,.questions-inner{grid-template-columns:1fr}.enterprise-copy>p:not(.eyebrow){max-width:650px}.pricing-panel{max-width:650px}.team-cards{gap:12px}.team-card{padding:18px}.team-card h3{font-size:22px}.hero h1{font-size:clamp(46px,6.5vw,69px)}}
+@media(max-width:620px){.hero h1{font-size:clamp(44px,10.5vw,65px)}.buyer-grid{grid-template-columns:1fr;gap:10px;padding-block:14px}.buyer-grid>div+div{border-left:0;border-top:1px solid #345043;padding:10px 0 0}.buyer-grid>div{grid-template-columns:24px 1fr}.team-cards{grid-template-columns:1fr}.team-card svg{height:86px;margin:12px 0}.enterprise,.research-teams,.questions{padding-block:39px}.commercial-heading h2,.enterprise h2,.questions h2{font-size:42px}.monthly-price h3{font-size:25px}.monthly-price h3 span{font-size:12px}.closing-actions{width:100%}.pricing-label{padding:14px 20px}}
+@media(max-width:350px){.monthly-price{flex-wrap:wrap}.hero h1{font-size:39px}.nav-action{font-size:10px}.annual-price h3{font-size:38px}}
