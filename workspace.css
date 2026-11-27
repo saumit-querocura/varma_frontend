@@ -56,3 +56,18 @@ dialog{width:min(460px,calc(100% - 32px));border:1px solid #404b42;background:#1
 .profile-links{display:flex;align-items:center;justify-content:space-between;gap:10px}.guide-link{background:none;border:0;padding:0;color:#b6c1b7;font-size:11px;text-decoration:underline;text-underline-offset:3px}.guide-link:hover{color:var(--accent)}.mobile-brand{display:none}
 @media(min-width:1151px){.stage-view{min-height:328px}.profile-body{padding:19px 20px}.property{padding:8px 0}}
 @media(max-width:700px){.mobile-brand{display:inline;color:var(--text);font-weight:700;font-size:22px;letter-spacing:-1.7px}.mobile-brand span{color:var(--accent)}.crumb>span{display:none}}
+
+.explorer-welcome { display: flow-root; }
+.pip-guide { float: right; display: flex; align-items: center; gap: 5px; padding: 3px 13px 3px 3px; margin: 9px 0 8px 14px; border: 1px solid #4a5948; border-radius: 30px; background: #212a21; color: #dbebcd; font-size: 12px; }
+.pip-guide:hover { background: #303c2e; }
+.pip-guide img, .notebook-pip { transform: rotate(-7deg); }
+.dialog-header h2 { display: flex; align-items: center; gap: 7px; }
+.dialog-header h2 img { flex: none; }
+.pip-head { background: #253127; }
+.pip-hello { font-size: 17px; font-weight: 550; }
+.card-cid { padding: 2px 5px; border-radius: 3px; background: var(--tint); color: #252a24; transform: rotate(-3deg); }
+.compound-card.violet .card-cid { transform: rotate(3deg); }
+@media (max-width: 700px) {
+  .pip-guide { float: none; margin: 0 0 9px; padding: 0 10px 0 0; font-size: 11px; }
+  .pip-guide img { width: 36px; height: 30px; }
+}
