@@ -1,5 +1,11 @@
-# Varma frontend — development preview
+# Varma molecular discovery workspace
 
-Static, nontransactional research-workspace concept preview. No live accounts, API, checkout, subscription sales, model execution or private data. The commercial application belongs on a separate suitable host.
+Varma is a static, browser-based research preview by QueroCura. Open `index.html` or serve the repository root with `python -m http.server`. The app uses local assets and requires no build step.
 
-Publish from main / root in GitHub Pages. Configure the custom domain in Pages settings before adding the Wix CNAME (varma -> saumit-querocura.github.io). Do not modify the apex or www records. This package uses relative assets, no Jekyll, and a meta CSP; GitHub Pages does not apply Cloudflare _headers files. noindex is intentional for development.
+The explorer includes six reference compounds with 3D conformers, molecular formulas, molecular weights, XLogP estimates and hydrogen bond counts from PubChem. Each compound profile links to its source record. Drag the model or focus it and use the arrow keys to rotate. The library supports search by name, class, formula and CID. Skeletal diagrams were drawn from the reference SMILES using RDKit. The 3D viewer shows connectivity, with custom element colours identified in its legend.
+
+The notebook calculates statistics from three example observations in browser memory. The evidence studio and research lifecycle are illustrative workspaces. The preview has no accounts, backend connection or predictive model execution.
+
+## Hosting
+
+Publish from the repository root on GitHub Pages. Keep the configured custom domain and relative asset paths. The page sets a local-only content security policy and intentionally requests no indexing.
