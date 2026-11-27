@@ -15,3 +15,5 @@ Publish from the repository root on GitHub Pages. Keep the configured custom dom
 ## Enterprise landing page
 
 The landing page includes proposed company-level subscription prices (INR 1 crore annually or INR 10 lakh monthly), subject to agreement, with a no-royalty commercial proposition. Enterprise links open email drafts addressed to QueroCura's published contact address. No lead data is collected, sent or stored by the static site; no checkout, registration or paid features are represented as available. The preview remains intentionally noindex pending a launch decision.
+
+The research walkthrough on the landing page compares three pairs of existing reference compounds using the same local descriptor records as the explorer. Signed differences are A minus B. The walkthrough is descriptive and does not predict efficacy, safety or binding.

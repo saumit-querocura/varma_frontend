@@ -14,13 +14,14 @@
   <script defer src="compounds.js"></script>
   <script defer src="molecule.js"></script>
   <script defer src="landing.js"></script>
+  <script defer src="research-case.js"></script>
 </head>
 <body>
   <a class="skip" href="#intro">Skip to content</a>
   <header class="masthead">
     <div class="wrap nav-row">
       <a class="brand" aria-label="Varma home" href="index.html"><img src="assets/varma-emblem.webp" alt="" width="64" height="37"><span class="wordmark">Varma<small>Intelligence in life.</small></span></a>
-      <nav aria-label="Page navigation"><a href="#tour">Platform</a><a href="#research-teams">Who it’s for</a><a href="#enterprise">Pricing</a><a href="#questions">FAQ</a></nav>
+      <nav aria-label="Page navigation"><a href="#tour">Platform</a><a href="#research-case">Case study</a><a href="#research-teams">Who it’s for</a><a href="#enterprise">Pricing</a><a href="#questions">FAQ</a></nav>
       <a class="nav-action" href="#enterprise">Enterprise enquiries <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -56,6 +57,30 @@
     </section>
     <section class="buyer-strip" aria-label="Research principles"><div class="wrap buyer-grid"><div><span>01</span><strong>Evidence first</strong><small>Traceable reference compound data</small></div><div><span>02</span><strong>Inspect, don’t guess</strong><small>Interactive molecular representations</small></div><div><span>03</span><strong>Transparent reasoning</strong><small>Visible calculations and assumptions</small></div></div></section>
     <section class="research-approach" id="approach" aria-labelledby="approach-title"><div class="wrap approach-inner"><div class="approach-intro"><p class="eyebrow"><span class="rule"></span>Designed for inquiry</p><h2 id="approach-title">From a question<br>to <em>clearer evidence.</em></h2><p>Look closely. Compare thoughtfully. Keep the reasoning visible. Every view is an invitation to explore, not a shortcut to scientific conclusions.</p></div><div class="approach-cards"><a href="workspace.html#explorer" class="approach-card"><span class="approach-index">01 / OBSERVE</span><svg viewBox="0 0 160 84" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="m55 13 29 17v33L55 80 26 63V30Z M84 30l29-17 29 17v33l-29 17-29-17 M26 30l29-17 M55 80l29-17"/><path stroke-dasharray="3 5" d="M3 42h154M84 0v84"/></g><g fill="currentColor"><circle cx="55" cy="13" r="4"/><circle cx="84" cy="30" r="5"/><circle cx="113" cy="13" r="4"/><circle cx="142" cy="63" r="4"/></g></svg><h3>Structure</h3><p>Inspect reference conformers and their properties.</p><span class="approach-link">Explore molecules <b aria-hidden="true">↗</b></span></a><a href="#compare" data-enhanced hidden class="approach-card"><span class="approach-index">02 / COMPARE</span><svg viewBox="0 0 160 84" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 66h130M15 14v52M15 48h130M15 30h130" stroke-opacity=".35"/><path d="m22 57 32-17 28 9 30-24 30-9M22 62l32-7 28-17 30 13 30-8"/><circle cx="112" cy="25" r="5"/><circle cx="112" cy="51" r="5"/></g></svg><h3>Properties</h3><p>See how two known compounds differ side by side.</p><span class="approach-link">Open comparison <b aria-hidden="true">↗</b></span></a><a href="workspace.html#desk" class="approach-card"><span class="approach-index">03 / RECORD</span><svg viewBox="0 0 160 84" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="35" y="7" width="90" height="70" rx="4"/><path d="M50 7v70M62 22h48M62 32h35M62 42h42M62 64l13-12 12 8 20-17"/><path d="M28 22h15M28 40h15M28 58h15"/></g></svg><h3>Reasoning</h3><p>Document observations and examine the arithmetic.</p><span class="approach-link">Open notebook <b aria-hidden="true">↗</b></span></a></div></div></section>
+    <section class="research-case" id="research-case" aria-labelledby="case-title">
+      <div class="wrap">
+        <div class="case-heading"><div><p class="eyebrow"><span class="rule"></span>Inside a scientific decision</p><h2 id="case-title">One structural change.<br><em>What does it tell us?</em></h2></div><p>Try an actual comparison from Varma’s reference library. Inspect both structures, examine differences in the recorded descriptors, and separate observations from hypotheses.</p></div>
+        <div class="case-shell">
+          <div class="case-toolbar"><div><span class="case-label">RESEARCH WALKTHROUGH / 001</span><h3>Structure–property exploration</h3></div><span class="case-tag">Reference data · Not a prediction</span></div>
+          <div class="case-controls" id="case-controls" hidden>
+            <label for="case-preset">Research question</label><select id="case-preset"><option value="methylation">What changes when a xanthine gains a methyl group?</option><option value="lipophilicity">How do two aromatic acids differ in estimated lipophilicity?</option><option value="hydrogen-bonding">How do hydrogen-bond counts differ between two reference compounds?</option></select>
+          </div>
+          <div class="case-content">
+            <div class="case-structures">
+              <article class="case-compound"><span class="case-label">REFERENCE A</span><h4 id="case-name-a">Caffeine</h4><span id="case-formula-a">C₈H₁₀N₄O₂</span><img id="case-art-a" src="assets/compound-2519.png" width="530" height="218" alt="Skeletal structure of caffeine" loading="lazy"><a id="case-explore-a" href="workspace.html#explorer/2519">Inspect in 3D ↗</a><a id="case-source-a" href="https://pubchem.ncbi.nlm.nih.gov/compound/2519" target="_blank" rel="noopener noreferrer">PubChem source ↗</a></article>
+              <article class="case-compound"><span class="case-label">REFERENCE B</span><h4 id="case-name-b">Theobromine</h4><span id="case-formula-b">C₇H₈N₄O₂</span><img id="case-art-b" src="assets/compound-5429.png" width="530" height="218" alt="Skeletal structure of theobromine" loading="lazy"><a id="case-explore-b" href="workspace.html#explorer/5429">Inspect in 3D ↗</a><a id="case-source-b" href="https://pubchem.ncbi.nlm.nih.gov/compound/5429" target="_blank" rel="noopener noreferrer">PubChem source ↗</a></article>
+            </div>
+            <div class="case-results">
+              <p class="case-label">DESCRIPTOR COMPARISON</p>
+              <table class="case-table"><caption>Difference is reference A minus reference B.</caption><thead><tr><th scope="col">Descriptor</th><th scope="col">A</th><th scope="col">B</th><th scope="col">Δ A−B</th></tr></thead><tbody id="case-rows"><tr><th scope="row">Mass (g/mol)</th><td>194.19</td><td>180.16</td><td>+14.03</td></tr><tr><th scope="row">XLogP estimate</th><td>−0.1</td><td>−0.8</td><td>+0.7</td></tr><tr><th scope="row">H-bond donors</th><td>0</td><td>1</td><td>−1</td></tr><tr><th scope="row">H-bond acceptors</th><td>3</td><td>3</td><td>0</td></tr></tbody></table>
+              <div class="case-observation" role="status" aria-live="polite"><span class="case-label">OBSERVATION</span><p id="case-observation">Caffeine has an additional methyl group replacing a hydrogen. Its recorded mass is 14.03 g/mol higher and its hydrogen-bond donor count is one lower.</p></div>
+              <div class="case-hypothesis"><span class="case-label">NEXT RESEARCH QUESTION</span><p id="case-hypothesis">Could the methylation affect molecular interactions? A target-specific study and appropriate experimental evidence would be needed.</p></div>
+            </div>
+          </div>
+          <div class="case-bottom"><p>Illustrative comparison of existing compounds using local PubChem reference records. Descriptors alone do not establish binding affinity, efficacy, safety or clinical benefit.</p><a href="#enterprise">Discuss your research workflow <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
     <section class="collection wrap" id="collection" aria-labelledby="collection-title">
       <div class="section-heading"><div><p class="eyebrow"><span class="rule"></span>Compound library</p><h2 id="collection-title">Discovery in detail.</h2></div><a class="text-link" href="workspace.html#library">View all six compounds <span aria-hidden="true">→</span></a></div>
       <div class="compound-cards">
