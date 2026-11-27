@@ -261,3 +261,89 @@ button:focus-visible, select:focus-visible { outline: 2px solid var(--lime); out
 @media (min-width:621px) and (max-width:1100px) {
   #specimen-key { top: 1%; left: 3%; }
 }
+
+/* Emerald editorial system — shared visual language with the research workspace. */
+:root {
+  --page:#0c1713; --line:#2b4237; --ink:#f0f6ed; --muted:#b2c6b8; --lime:#bce99a;
+  --emerald:#77cba1; --surface:#15251d;
+}
+body { background:var(--page); }
+.masthead { background:#0f1e17; }
+.nav-row { min-height:82px; }
+.nav-row nav a { color:#c1d3c5; }
+.nav-action { border-color:#456b55; padding:10px 17px; }
+.hero { background:radial-gradient(ellipse at 77% 45%,rgb(var(--glow) / .15),transparent 53%),linear-gradient(125deg,#0b1b15,#132b20 64%,#102019); }
+.hero::before { opacity:.55; }
+.hero::after { background:radial-gradient(ellipse at 85% 87%,rgb(var(--glow) / .10),transparent 35%); }
+.hero-grid { min-height:clamp(560px,43vw,690px); gap:clamp(0px,2vw,35px); }
+.hero-copy { padding-block:64px; }
+.hero h1 { font-size:clamp(55px,5.5vw,96px); letter-spacing:-.065em; }
+.hero h1 em { color:#c6ecae; }
+.eyebrow { color:#b5d1bd; }
+.lead { color:#c1d3c7; max-width:435px; line-height:1.7; }
+.launch { border:1px solid #d2f7b5; box-shadow:0 6px 24px #04130d50; padding:13px 20px; }
+.launch:hover { background:#d9f5c5; }
+.specimen { align-self:stretch; }
+.plate { inset:7% 1% 8%; border:1px solid #8bba9630; border-radius:28px; background:linear-gradient(145deg,#88bd9610,transparent 60%); }
+.plate i { color:#7b9d84; }
+.orbit { border-color:rgb(var(--rim) / .36); }
+.pip-field-note div { background:#e0ecd9; color:#233c2c; box-shadow:0 8px 24px #07140c45; }
+.pip-field-note div span,.pip-field-note button { color:#315340; }
+.pip-field-note button { border-color:#6f8f74; }
+.pip-field-note div::before { background:#c3d7aa; }
+.collection { padding-block:clamp(48px,5vw,82px); }
+.section-heading { margin-bottom:28px; }
+.compound-cards { gap:clamp(12px,1.5vw,24px); }
+.compound { --field:#19382b; --edge:#365746; background:#15271e; border-radius:20px; box-shadow:0 8px 26px #06110b33; }
+.compound.lilac { --field:#282939; --edge:#49475b; }
+.compound.amber { --field:#302d23; --edge:#554d38; }
+.diagram { height:clamp(148px,15vw,225px); }
+.diagram .tiny { transform:none; border-radius:5px; }
+.compound.lilac .tiny { transform:none; }
+.card-copy { padding:19px 20px; }
+.card-copy h3 { font-size:23px; }
+.arrow { width:35px; height:35px; border-color:#456552; }
+.compound:hover .arrow,.compound:focus-visible .arrow { color:#102217; background:var(--lime); border-color:var(--lime); }
+.compare { background:radial-gradient(ellipse at 85% 55%,#3b67402c,transparent 65%),#102019; padding-block:clamp(48px,5vw,82px); }
+.compare-intro h2 em { color:#c6ecae; }
+.compare-intro .comparison-note { border-color:#87b99a; color:#c3d9c9; }
+.comparison-panel { background:#14261d; border-color:#365344; border-radius:20px; box-shadow:0 12px 36px #06110b45; }
+.pair-choices div { background:radial-gradient(ellipse at 50% 105%,#3a6650,transparent 90%),#1c382a; }
+.pair-choices div+div { border-color:#485451; }
+.pair-table th,.pair-table td { border-color:#2c4738; padding-block:10px; }
+.pair-table thead th { background:#1a3024; }
+.tour { background:#14251c; padding-block:clamp(48px,5vw,82px); }
+.tools a { padding-block:22px; }
+.tool-icon { background:#244533; color:#bce99a; border-radius:11px; }
+.tools a:nth-child(2) .tool-icon { background:#304139; color:#c1dcca; }
+.tools a:nth-child(3) .tool-icon { background:#3b3c2c; color:#e4d9a9; }
+.foot-row { min-height:96px; }
+@media (max-width:800px) {
+  .hero-grid { min-height:500px; gap:0; }
+  .hero-copy { padding-block:42px; }
+  .hero h1 { font-size:clamp(44px,7vw,64px); }
+  .diagram { height:145px; }
+  .card-copy { padding:14px; }
+  .card-copy h3 { font-size:20px; }
+}
+@media (max-width:620px) {
+  .nav-row { min-height:64px; }
+  .hero-grid { min-height:0; }
+  .hero-copy { padding:32px 0 0; }
+  .hero h1 { font-size:clamp(42px,10.4vw,64px); }
+  .hero-links { flex-wrap:wrap; }
+  .specimen { margin-block:18px 22px; padding:12px; }
+  .plate { inset:0; border-radius:18px; }
+  .specimen-art { width:100%; }
+  .specimen figcaption { max-width:100%; }
+  .collection,.compare,.tour { padding-block:36px; }
+  .diagram { height:112px; }
+  .card-copy { padding:12px; }
+  .card-copy h3 { font-size:19px; }
+  .arrow { width:30px;height:30px; }
+  .pair-table th,.pair-table td { padding:8px 7px; overflow-wrap:anywhere; }
+  .foot-row { min-height:0; }
+}
+@media (prefers-reduced-motion:no-preference) and (hover:hover) {
+  .nav-action,.launch,.arrow,.tool-icon { transition:background .18s,border-color .18s,color .18s; }
+}
