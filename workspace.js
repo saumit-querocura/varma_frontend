@@ -46,6 +46,14 @@
       entry.append(dot, elements[el].name);
       return entry;
     }));
+    const position = compounds.indexOf(compound);
+    const previous = compounds[(position + compounds.length - 1) % compounds.length];
+    const next = compounds[(position + 1) % compounds.length];
+    get('previous-compound').href = '#explorer/' + previous.cid;
+    get('previous-compound').textContent = '← ' + previous.name;
+    get('next-compound').href = '#explorer/' + next.cid;
+    get('next-compound').textContent = next.name + ' →';
+    get('compound-position').textContent = (position + 1) + ' / ' + compounds.length + ' reference compounds';
     viewer.setCompound(compound);
   }
 
