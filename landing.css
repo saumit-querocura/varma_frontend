@@ -347,3 +347,13 @@ body { background:var(--page); }
 @media (prefers-reduced-motion:no-preference) and (hover:hover) {
   .nav-action,.launch,.arrow,.tool-icon { transition:background .18s,border-color .18s,color .18s; }
 }
+
+/* Transparent Varma lockup */
+.brand { gap:9px; letter-spacing:0; }
+.brand img { margin:0; width:44px; height:44px; object-fit:contain; flex:none; }
+.brand .wordmark { color:#f1f7ef; display:flex; flex-direction:column; gap:3px; font-size:34px; font-weight:620; letter-spacing:-.055em; line-height:1; }
+.brand .wordmark small { font:600 8px/1.3 "DM Sans",Arial,sans-serif; text-transform:uppercase; letter-spacing:.17em; color:#9ed2aa; white-space:nowrap; }
+.foot-row .brand img { width:35px;height:35px; }
+.foot-row .brand .wordmark { font-size:25px; }
+.foot-row .brand .wordmark small { font-size:7px; }
+@media(max-width:620px){.brand img{width:33px;height:33px}.brand .wordmark{font-size:27px}.brand .wordmark small{font-size:6px}.nav-row{gap:10px}.nav-action{gap:7px;padding:8px 10px}}
