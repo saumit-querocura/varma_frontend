@@ -11,14 +11,16 @@
   <link rel="icon" href="assets/varma.svg" type="image/svg+xml">
   <link rel="preload" href="assets/caffeine-studio.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="landing.css">
-  <script src="landing.js"></script>
+  <script defer src="compounds.js"></script>
+  <script defer src="molecule.js"></script>
+  <script defer src="landing.js"></script>
 </head>
 <body>
   <a class="skip" href="#intro">Skip to content</a>
   <header class="masthead">
     <div class="wrap nav-row">
       <a class="brand" aria-label="Varma home" href="index.html"><img src="assets/varma.svg" alt="" width="36" height="36">varma<span>.</span></a>
-      <nav aria-label="Page navigation"><a href="#tour">Platform</a><a href="#collection">Compounds</a></nav>
+      <nav aria-label="Page navigation"><a href="#tour">Platform</a><a href="#collection">Compounds</a><a href="#compare" data-enhanced hidden>Compare</a></nav>
       <a class="nav-action" href="workspace.html#explorer">Open workspace <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -28,27 +30,52 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot"></span>Molecular discovery platform</p>
           <h1 id="headline">Little questions.<br><em>Big discoveries.</em></h1>
-          <p class="lead">What gives caffeine its shape? Turn a molecule around, get to know its properties, and follow the evidence wherever your curiosity leads.</p>
+          <p class="lead">Pick a specimen from the shelf. Explore its shape in three dimensions, then let Pip show you the details hidden in its structure.</p>
+          <fieldset class="specimen-picker" data-enhanced hidden>
+            <legend>Featured specimen</legend>
+            <input type="radio" name="specimen" id="pick-caffeine" value="2519" checked><label for="pick-caffeine">Caffeine</label>
+            <input type="radio" name="specimen" id="pick-aspirin" value="2244"><label for="pick-aspirin">Aspirin</label>
+            <input type="radio" name="specimen" id="pick-ibuprofen" value="3672"><label for="pick-ibuprofen">Ibuprofen</label>
+          </fieldset>
           <div class="hero-links"><a class="launch" href="workspace.html#explorer">Launch explorer <span aria-hidden="true">↗</span></a><a class="tour-link" href="#tour">Tour the platform <span aria-hidden="true">↓</span></a></div>
         </div>
-        <figure class="specimen">
+        <figure class="specimen" id="featured-specimen">
           <div class="plate" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           <div class="orbit" aria-hidden="true"></div>
+          <div class="lens-halo" aria-hidden="true"></div>
           <img class="specimen-art" src="assets/caffeine-studio.webp" fetchpriority="high" width="1120" height="880" alt="Caffeine’s fused rings and three methyl groups rendered in polished green and silver.">
+          <canvas class="specimen-art turn-model" id="turn-model" tabindex="0" aria-describedby="turn-hint" hidden></canvas>
           <aside class="pip-field-note" aria-label="A field note from Pip">
             <img src="assets/pip.svg" width="84" height="72" alt="Pip, a smiling notebook with a leafy sprout">
-            <div><span>Pip’s field note</span><p>Can you spot the two joined rings?</p></div>
+            <div><span>Pip’s field note</span><p id="field-question">Can you spot the two joined rings?</p><button type="button" id="reveal" aria-controls="specimen-key" aria-expanded="false" data-enhanced hidden>Show me <b aria-hidden="true">↗</b></button></div>
           </aside>
-          <figcaption><div><span class="tiny">PubChem CID 2519</span><strong>Caffeine <span>C₈H₁₀N₄O₂</span></strong></div><a href="workspace.html#explorer/2519" aria-label="Inspect caffeine in the explorer" title="Inspect caffeine in the explorer">↗</a></figcaption>
+          <div id="specimen-key" hidden><span></span><span></span></div>
+          <figcaption><div><span class="tiny">PubChem CID 2519</span><strong><b id="featured-name">Caffeine</b> <span>C₈H₁₀N₄O₂</span></strong><button type="button" id="turn" aria-controls="turn-model" aria-pressed="false" hidden>Turn in 3D</button><small id="turn-hint" hidden>Drag or use arrow keys</small></div><a href="workspace.html#explorer/2519" aria-label="Inspect caffeine in the explorer" title="Inspect caffeine in the explorer">↗</a></figcaption>
         </figure>
       </div>
     </section>
     <section class="collection wrap" id="collection" aria-labelledby="collection-title">
       <div class="section-heading"><div><p class="eyebrow"><span class="rule"></span>Compound library</p><h2 id="collection-title">Meet the molecules.</h2></div><a class="text-link" href="workspace.html#library">View all six compounds <span aria-hidden="true">→</span></a></div>
       <div class="compound-cards">
-        <a class="compound green" href="workspace.html#explorer/2519"><div class="diagram"><span class="tiny">CID 2519</span><img src="assets/compound-2519.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Caffeine</h3><span class="family">Xanthine alkaloid</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
-        <a class="compound lilac" href="workspace.html#explorer/2244"><div class="diagram"><span class="tiny">CID 2244</span><img src="assets/compound-2244.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Aspirin</h3><span class="family">Salicylate</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
-        <a class="compound amber" href="workspace.html#explorer/3672"><div class="diagram"><span class="tiny">CID 3672</span><img src="assets/compound-3672.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Ibuprofen</h3><span class="family">Arylpropionic acid</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+        <a class="compound green" href="workspace.html#explorer/2519"><div class="diagram"><span class="tiny">CID 2519</span><img class="card-render" src="assets/caffeine-studio.webp" width="1120" height="880" alt=""><img class="card-sketch" src="assets/compound-2519.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Caffeine</h3><span class="family">Xanthine alkaloid</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+        <a class="compound lilac" href="workspace.html#explorer/2244"><div class="diagram"><span class="tiny">CID 2244</span><img class="card-render" src="assets/aspirin-studio.webp" width="1120" height="880" alt=""><img class="card-sketch" src="assets/compound-2244.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Aspirin</h3><span class="family">Salicylate</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+        <a class="compound amber" href="workspace.html#explorer/3672"><div class="diagram"><span class="tiny">CID 3672</span><img class="card-render" src="assets/ibuprofen-studio.webp" width="1120" height="880" alt=""><img class="card-sketch" src="assets/compound-3672.png" width="530" height="218" alt=""></div><div class="card-copy"><div><h3>Ibuprofen</h3><span class="family">Arylpropionic acid</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+      </div>
+    </section>
+    <section class="compare" id="compare" aria-labelledby="compare-title" data-enhanced hidden>
+      <div class="wrap compare-grid">
+        <div class="compare-intro"><p class="eyebrow"><span class="rule"></span>Comparison bench</p>
+          <h2 id="compare-title">Spot the<br><em>difference.</em></h2>
+          <p>Set two compounds side by side. Look for a change in their structures, then check how their properties differ.</p>
+          <p class="comparison-note" id="comparison-note" aria-live="polite"></p>
+        </div>
+        <div class="comparison-panel">
+          <div class="pair-choices">
+            <div><label for="compare-a">First compound</label><select id="compare-a"></select><img id="sketch-a" src="assets/compound-2519.png" width="530" height="218" alt=""></div>
+            <div><label for="compare-b">Second compound</label><select id="compare-b"></select><img id="sketch-b" src="assets/compound-5429.png" width="530" height="218" alt=""></div>
+          </div>
+          <table class="pair-table" aria-label="Compound properties"><thead><tr><th scope="col">Property</th><th scope="col" id="name-a"></th><th scope="col" id="name-b"></th></tr></thead><tbody id="property-rows"></tbody></table>
+        </div>
       </div>
     </section>
     <section class="tour" id="tour" aria-labelledby="tour-title"><div class="wrap tour-grid">
