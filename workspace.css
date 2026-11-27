@@ -144,3 +144,19 @@ dialog dd{color:#c1d3c3}
 @media(max-width:900px){.rail:not(.open) .wordmark{display:none}.brand .mark{width:37px;height:37px}}
 @media(max-width:700px){.mobile-brand{display:inline-flex}.rail.open .brand .wordmark{display:flex}.rail.open .brand{gap:8px}.rail.open .brand .wordmark{font-size:30px}}
 @media(max-width:360px){.mobile-brand{font-size:17px}.mobile-brand img{width:20px;height:20px}.crumb strong{font-size:10px}.session{gap:4px}.topbar{padding-inline:11px}}
+
+/* Reference navigation and authentic brand emblem */
+.brand{background:#edf3e9;margin:14px 11px 0;padding:11px;height:69px;border-radius:11px;justify-content:center;gap:8px}
+.brand .mark{width:61px;height:35px;object-fit:contain}
+.brand .wordmark{color:#0c472d;font-size:25px;text-transform:uppercase;letter-spacing:.09em}
+.brand .wordmark small{color:#396b4c;font-size:6px}
+.compound-navigation{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 13px;padding:9px 13px;border:1px solid #304c3b;border-radius:9px;background:#17291f;font-size:12px}
+.compound-navigation a{color:#c6ebbb;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.compound-navigation a:hover{text-decoration:underline}
+.compound-navigation span{font:10px/1.4 var(--mono);color:#aabfae;text-align:center}
+.mobile-brand{padding:4px 6px;background:#edf3e9;color:#0c472d;border-radius:7px;text-transform:uppercase;font-size:13px;letter-spacing:.06em;gap:4px}
+.mobile-brand img{width:31px;height:18px;object-fit:contain}
+@media(max-width:1150px){.brand .mark{width:49px;height:29px}.brand .wordmark{font-size:21px}}
+@media(max-width:900px){.rail:not(.open) .brand{padding:5px;margin:9px 5px 0;height:46px}.rail:not(.open) .brand .mark{width:40px;height:24px}}
+@media(max-width:700px){.rail.open .brand{padding:10px;margin:10px 9px;justify-content:center;height:59px}.rail.open .brand .wordmark{font-size:23px}.compound-navigation{font-size:11px;padding:8px 10px}.compound-navigation span{font-size:9px}}
+@media(max-width:420px){.mobile-brand{font-size:11px}.mobile-brand img{width:25px;height:15px}.compound-navigation{gap:6px}.compound-navigation span{max-width:84px}}
